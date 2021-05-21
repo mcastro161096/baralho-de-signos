@@ -1,16 +1,16 @@
 import React from 'react';
 import './style.css';
 
-export default function ItemLista() {
+export default function ItemLista(props) {
     return (
         <div className="boxSigno">
             <div className="nomeSigno">
-                Aquário
+                {props.signo}
             </div>
-            <img className="imagemSigno" src="/assets/aquario.jpg" alt="Aquário" />
+            <img className="imagemSigno" src={props.imagem} alt={props.signo} />
 
             <div className="periodoNascimento">
-                21/01 - 19/02
+               {props.dataInicio} - {props.dataFim}
             </div>
         </div>
     );
